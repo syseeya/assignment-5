@@ -31,6 +31,8 @@
                           </tr>
                      </thead>
                 </table>
+                <div id="chart"></div>
+           </div>
       </body>
  </html>
  <script>
@@ -80,4 +82,17 @@
        }); // end .getJSON
     }); // end button
 }); // document ready
+var chart = c3.generate({
+          data: {
+              columns: [
+                ['The Predator', 38,32,8,4],
+                ['Crystal Sky Of Yesterday', 16,16,3,4],
+                ['Project Gutenberg', 14,12,9,8]
+              ],
+              type : 'bar'
+          },
+          bar: {
+              title: "Top 3 Box Office Movie:",
+          }
+       });
 </script>
